@@ -156,22 +156,24 @@ padding: 0;
     #toolbar{
         position: absolute;
         background-color: #663399;
-        width: 4rem;
+        width: 3rem;
         height: 100%;
-        display: flex;
-        flex-direction: column;
+        display: inline;
         top: 0;
     }
     .drawing-board{
         width: 80vh;
         height: 100%;
     }
-    .screen{
+    .setwidth{
         width: 2rem;
         height: 2rem;
-        margin: 1rem;
+        margin: 0.5rem;
         padding: 0.5rem;
-        text-align: center; 
+        text-align: center;
+    }
+    #clear{
+        position: relative;
     }
     .container{
         display: flex;

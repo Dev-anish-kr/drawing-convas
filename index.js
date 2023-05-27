@@ -111,7 +111,7 @@ undoButton.addEventListener("click", () => {
     })
 });
 
-document.querySelector('.screen').addEventListener('click', function() {
+document.querySelector('#save').addEventListener('click', function() {
     html2canvas(document.querySelector('.drawing-board'), {
         onrendered: function(canvas) {
             return Canvas2Image.saveAsPNG(canvas);
