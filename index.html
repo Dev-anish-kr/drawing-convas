@@ -1,42 +1,41 @@
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Drawing App</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/48625c171d.js" crossorigin="anonymous"></script>
-    <title>Drawing app</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #663399;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        } 
+    </style>
 </head>
-
 <body>
-    <section class="container">
-        <div class="drawing-board">
-            <canvas id="drawing-board"></canvas>
-        </div>
-        <div id="toolbar">
+    <header id="header">
+        <div id="logo">Project Drawing App</div>
+        <!-- Add navigation or other header content if needed -->
+    </header>
 
-            <button id="undo" class="setwidth-u">Undo</button>
-            <button class="setwidth" onclick="dec('lineWidth')">-</button>
-            <input id="lineWidth" class="quantity setwidth" name='lineWidth' type="number" value="5">
-            <button class="setwidth" onclick="inc('lineWidth')">+</button>
-            <input class="setwidth" id="stroke" name='stroke' type="color">
-            <button onclick="capture()" class="screen"> Take a shot</button>
-            <button class="setwidth" id="clear"><i id="clear" class="fa-solid fa-brush"></i></button>
+    <section id="hero-section">
+        <div id="hero-content">
+            <h1>Welcome to the Project Drawing App</h1>
+            <p>Create amazing digital artworks with ease.</p>
+            <a id="cta-button" href="/draw.html">Get Started</a>
         </div>
     </section>
-    <script src="./index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
-        function capture() {
-            html2canvas(document.body).then(canvas => {
-                let a = document.createElement("a");
-                a.download = "ss.png";
-                a.href = canvas.toDataURL("image/png");
-                a.click(); // MAY NOT ALWAYS WORK!
-            });
-        }
+        // Animate the hero content on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            const heroContent = document.getElementById("hero-content");
+            setTimeout(function() {
+                heroContent.style.opacity = 1;
+            }, 500);
+        });
     </script>
 </body>
-
 </html>

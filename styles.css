@@ -15,6 +15,62 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #FFFFFF;
+    color: #663399;
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    padding: 20px;
+    color: #FFFFFF;
+}
+
+#hero-content {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    color: #663399;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#cta-button:hover {
+    background-color: #663399;
+    color: #FFFFFF;
+}
 
 .container{
     border: 2px solid #663399;
@@ -28,6 +84,7 @@ h1 {
     /* height: 600px; */
     width: 100vw;
     height: 100vh;
+    background: #FFF;
 }
 
 #toolbar{
@@ -80,7 +137,7 @@ padding: 0;
     text-align: center;
 }
 .setwidth-u{
-    width: 3rem;
+    width: 2rem;
     height: 2rem;
     margin: 1rem;
     padding: 0.5rem;
@@ -93,4 +150,33 @@ padding: 0;
     margin: 1rem;
     padding: 0.5rem;
     text-align: center; 
+}
+
+@media screen and (max-width: 400px) {
+    #toolbar{
+        position: absolute;
+        background-color: #663399;
+        width: 4rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+    }
+    .drawing-board{
+        width: 80vh;
+        height: 100%;
+    }
+    .screen{
+        width: 2rem;
+        height: 2rem;
+        margin: 1rem;
+        padding: 0.5rem;
+        text-align: center; 
+    }
+    .container{
+        display: flex;
+        height: 100%;
+        width: 100%;
+    }
+
 }

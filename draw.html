@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/48625c171d.js" crossorigin="anonymous"></script>
+    <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <title>Drawing app</title>
+</head>
+
+<body>
+    <section class="container">
+        <div class="drawing-board">
+            <canvas id="drawing-board"></canvas>
+        </div>
+        <div id="toolbar">
+            <button id="undo" class="setwidth-u"><i class="fa-solid fa-rotate-left fa-lg"></i></button>
+            <button class="setwidth" onclick="dec('lineWidth')">-</button>
+            <input id="lineWidth" class="quantity setwidth" name='lineWidth' type="number" value="5">
+            <button class="setwidth" onclick="inc('lineWidth')">+</button>
+            <input class="setwidth" id="stroke" name='stroke' type="color">
+            <button class="screen"> <i class="fa-solid fa-floppy-disk fa-lg"></i></button>
+            <button class="setwidth" id="clear"><i id="clear" class="fa-solid fa-brush fa-lg"></i></button>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+
+</html>
